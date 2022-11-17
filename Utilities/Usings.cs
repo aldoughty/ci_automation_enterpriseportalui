@@ -1,1 +1,19 @@
-
+﻿global using System.Diagnostics;
+global using System.Reflection;
+global using System.Data;
+global using System.Collections.ObjectModel;
+global using ci_automation_enterpriseportalui.Libs;
+global using ci_automation_enterpriseportalui.PageObjects;
+global using ci_automation_enterpriseportalui.Objects;
+global using ci_common_qa_automation.BaseObjects;
+global using ci_common_qa_automation.Utilities;
+global using SeleniumActions = ci_automation_enterpriseportalui.Libs.SeleniumActions;
+global using OpenQA.Selenium;
+global using OpenQA.Selenium.Chrome;
+global using OpenQA.Selenium.Support.UI;
+global using OpenQA.Selenium.Interactions;
+global using FluentAssertions;
+global using Microsoft.Extensions.Configuration;
+global using Azure.Security.KeyVault.Secrets;
+global using Azure.Core;
+global using Azure.Identity;
