@@ -129,7 +129,7 @@
         }
         public HashSet<string> GetSearchFilterResults(By element)
         {
-            //gets all elements and adds unique values to HashSet
+            //gets all elements and adds unique text values to HashSet
             
             IList<IWebElement> all = Driver.FindElements(element, 10);
 
@@ -141,6 +141,31 @@
             }
 
             return elementText;
+        }
+        public bool ValidateElementTextListAlphabeticalOrder(By element)
+        {
+            //gets all elements, adds text values to List and validates for alphabetical order
+
+            IList<IWebElement> all = Driver.FindElements(element, 10);
+
+            List<string> elementText = new();
+
+            foreach (IWebElement webElement in all)
+            {
+                elementText.Add(webElement.Text);
+            }
+
+            var alphabetical = true;
+            for (int i = 0; i < elementText.Count - 1; i++)
+            {
+                if (StringComparer.Ordinal.Compare(elementText[i], elementText[i + 1]) > 0)
+                {
+                    alphabetical = false;
+                    break;
+                }
+            }
+
+            return alphabetical;
         }
         public void Login(string org, string username, string password)
         {
