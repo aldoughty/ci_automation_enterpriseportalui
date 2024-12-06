@@ -18,7 +18,7 @@
         public MessageData()
         {
             StandardTestParameters = new StandardTestParameters();
-            StandardTestParameters.AutomationMiroService = GetType().Namespace;
+            StandardTestParameters.AutomationMicroService = GetType().Namespace;
         }
         public void ValidateContent()
         {
